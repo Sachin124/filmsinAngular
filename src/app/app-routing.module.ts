@@ -9,7 +9,7 @@ import { Routes } from '@angular/router';
 import {} from  './Modules/submissions/submissions.module';
 export const AppRouting: Routes = [{
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/submissions',
     pathMatch: 'full'
   },
   {
