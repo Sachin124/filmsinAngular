@@ -1,0 +1,106 @@
+<section class="bg_navy section_padding dashboard">
+
+  <div class="row pr-2 pl-2">
+    <div class=" col-lg-12 col-sm-12 col-md-12">
+      <div class="title">
+      <h4 class="mb-3">Film Submissions</h4>
+    </div>
+    </div>
+    <div class="col-lg-8 col-md-6 col-sm-12">
+      <div class="d-flex">
+        <div class="dropdown">
+          <button href="#" class="btn bwhite dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+            Last 30 Days
+            <b class="caret"></b>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </div>
+        <button class="btn btn_padding btn-org ">Modify Filters </button>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 d-none d-sm-block">
+      <div class="dfe">
+        <div class="form-group pull-right">
+          <label class="" for="from_year"><small><strong>Sort by: </strong></small></label>
+          <div class="dropdown  d-inline-block">
+            <button href="#" class="btn btn-sm bwhite dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+              Latest Submissions
+              <b class="caret"></b>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+   <form class="bg_white form_box mt-4">
+
+    <div class="">
+      <div class="table-responsive">
+
+   <table id="example" class="table " >
+      <thead >
+          <tr class="border-0 bg-main th-fi">
+              <th class="text-center"> <input type="checkbox" id="fruit1" name="fruit-1" value="Apple" disabled></th>
+              <th>FILM NAME <span><img class="tb-sort" src="../../../assets/img/sort_default.svg" alt=""></span></th>
+              <th>FILMMAKER <span><img class="tb-sort" src="../../../assets/img/sort_default.svg" alt=""></span></th>
+              <th>CATEGORY <span><img class="tb-sort" src="../../../assets/img/sort_down.svg" alt=""></span></th>
+              <th>GENRE <span><img class="tb-sort" src="../../../assets/img/sort_default.svg" alt=""></span></th>
+              <th>LENGTH <span><img class="tb-sort" src="../../../assets/img/sort_default.svg" alt=""></span></th>
+              <th>TIME <span><img class="tb-sort" src="../../../assets/img/sort_up.svg" alt=""></span></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="bt-hidden" *ngFor="let row of rows  | paginate: { itemsPerPage: 2, currentPage: page }">
+            <td class="text-center">
+              <input type="checkbox"  id="{{row.id}}" name="{{row.first_name}}" value="{{row.first_name}}" >
+            </td>
+            <td class="td-fi pointer" (click)="closeSidebar()" routerLink="/submissions/view"> <div class="word-break"> {{row.first_name}}</div></td>
+              <td ><div class="word-break">{{row.film_maker}}</div></td>
+              <td class="links"><a href="#" class="round_btn">{{row.category}}</a></td>
+              <td class="links"><a href="#" class="round_btn bg_pink">{{row.genre}}</a></td>
+              <td>{{row.length}}</td>
+              <td>{{row.time}}</td>
+          </tr>
+          <!-- <tr>
+            <td class="text-center"> <input type="checkbox" id="fruit1" name="fruit-1" value="Apple" ></td>
+            <td class="td-fi">Everything is Fine </td>
+              <td>Timothy Thompson</td>
+              <td class="links"><a href="#" class="round_btn">DOCU</a></td>
+              <td class="links"><a href="#" class="round_btn bg_pink">DRAMA</a></td>
+              <td>31</td>
+              <td>24 Jun, 24:15:00</td>
+          </tr> -->
+
+
+      </tbody>
+
+  </table>
+  <div class="">
+  <div  class="dfe">
+    <pagination-controls (pageChange)="page = $event"  previousLabel=""
+    nextLabel=""></pagination-controls>
+  </div>
+</div>
+</div>
+</div>
+</form>
+</section>

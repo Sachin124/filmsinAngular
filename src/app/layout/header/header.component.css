@@ -1,0 +1,24 @@
+.navbar-plain{
+  background-color: #FFFFFF;
+  box-shadow: 7px 0 6px 0 rgba(216,216,216,0.59);
+}
+/*
+-webkit-box-shadow: 7px 0 6px 0 rgba(216,216,216,0.95) !important;
+box-shadow: 7px 0 6px 0 rgba(216,216,216,0.95) !important; */
+
+.top_header_menu .notification span {
+  padding: 0px !important;
+  width: 14px !important;
+  height: 14px !important;
+  left: 24px !important;
+}
+
+.bell{
+  height: 17px;
+  width: 20px;
+}
+
+.mobile_logo{
+  height: 27.03px;
+  width: 122px;
+}

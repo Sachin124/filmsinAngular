@@ -7,11 +7,13 @@ import { RouterModule } from '@angular/router';
 import { AppRouting } from './app-routing.module';
 import { HeaderModule } from './layout/header/header.module';
 import { FooterModule } from './layout/footer/footer.module';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent    
+    LayoutComponent,
+    SidebarComponent    
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,9 @@
+/*
+ *   Copyright (c) 2021 Sachin S. Bahegavankar
+ *   All rights reserved.
+ */
 import { Component, OnInit } from '@angular/core';
-
+// import {} from '../../../assets/img/'
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -11,5 +15,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  showSidebar(){
+    let className = document.getElementById('toggleSidebar');
+    className.classList.add("toggled");
+  }
 }

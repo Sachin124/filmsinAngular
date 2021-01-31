@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+.bg-main{
+  background-color: #f7f7f7;
+}
+/* Navbar */
+
+.vl {
+  border-right: 1px solid #DDDDDD !important;
+  opacity: 0.8;
+
+}
+.user{
+  height: 40px;
+  width: 40px;
+}
+
+.gtext{
+  color: #9BA4B0;
+  font-family: Lato;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* Navbar End */

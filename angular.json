@@ -23,11 +23,17 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/my_style.css",
+              "src/assets/css/responsive_css.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/fontawesome/css/all.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js"
+              "./node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/vendor/jquery-slim.min.js",
+              "src/assets/js/vendor/popper.min.js",
+              "src/assets/js/bootstrap.min.js"
             ]
           },
           "configurations": {
