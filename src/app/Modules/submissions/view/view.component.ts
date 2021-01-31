@@ -3,6 +3,8 @@
  *   All rights reserved.
  */
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataSharingService } from 'src/app/animation/data-sharing.service';
 
 @Component({
   selector: 'app-view',
@@ -11,13 +13,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private activeRouter: DataSharingService,private router: Router) { }
 
   ngOnInit() {
+    // console.log(this.router.url);
+    this.activeRouter.changeData(this.router.url);
     let className = document.getElementById('toggleSidebar');
     if(className){
       className.classList.remove("toggled");
-
     }
   }
 

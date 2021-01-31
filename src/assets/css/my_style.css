@@ -155,8 +155,29 @@ margin-bottom: 5px;
 
 }
 
+.cus{
+  display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 
-.mt11{}
+
+.mt11{
+  margin-top: 2px;
+}
 .review_list .user img{
     border-radius: 100%;
     overflow: hidden;
@@ -425,9 +446,35 @@ box-shadow: 0 0 3px 2px #D6D6D6;
   }
   /* checkbox */
 
-  /* input[type='checkbox'], input[type='radio'] { filter: grayscale(1) } */
+input[type=checkbox].css-checkbox {
+							position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+						}
 
+						input[type=checkbox].css-checkbox + label.css-label {
+							padding-left:21px;
+							height:16px;
+							display:inline-block;
+							line-height:16px;
+							background-repeat:no-repeat;
+							background-position: 0 0;
+							font-size:16px;
+							vertical-align:middle;
+							cursor:pointer;
 
+						}
+
+						input[type=checkbox].css-checkbox:checked + label.css-label {
+							background-position: 0 -16px;
+						}
+						label.css-label {
+				background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_81f722579f9a47fe19127e2f016b3c37.png);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
   /* checkbox end */
   .ngx-pagination li{
     border-radius: 4px !important;
@@ -923,8 +970,8 @@ box-shadow: 0 0 3px 2px #D6D6D6;
 .header{
   position: relative;
 }
-.menu_btn{
+/* .menu_btn{
   position: absolute;
   top:10px;
   left:10px;
-}
+} */

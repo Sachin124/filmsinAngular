@@ -2,19 +2,36 @@
  *   Copyright (c) 2021 Sachin S. Bahegavankar
  *   All rights reserved.
  */
-import { Component, OnInit } from '@angular/core';
-
+import { Component, HostBinding, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataSharingService } from 'src/app/animation/data-sharing.service';
+import {
+  UpperAnimations
+} from '../../../animation/animation3';
+import {
+  slideInDownAnimation
+} from '../../../animation/animation';
 @Component({
   selector: 'app-submissions',
   templateUrl: './submissions.component.html',
-  styleUrls: ['./submissions.component.css']
+  styleUrls: ['./submissions.component.css'],
+  animations: [UpperAnimations,slideInDownAnimation],
+  host: {
+    "[@pageAnimations]": ""
+  }
 })
 export class SubmissionsComponent implements OnInit {
+  @HostBinding("@routeAnimation") routeAnimation = true;
+
   page: number =1;
   rows;
-  constructor() { }
+  constructor(private activeRouter: DataSharingService,private router: Router) { }
 
   ngOnInit() {
+    this.activeRouter.changeData(this.router.url);
+    if(window.innerHeight <= 600){
+     this.closeSidebar();
+    }
     this.rows = [
       {
         id: 1,
