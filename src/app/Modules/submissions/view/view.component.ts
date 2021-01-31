@@ -5,11 +5,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataSharingService } from 'src/app/animation/data-sharing.service';
-
+import {
+  UpperAnimations
+} from '../../../animation/animation3';
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
-  styleUrls: ['./view.component.css']
+  styleUrls: ['./view.component.css'],
+  animations: [UpperAnimations],
+  host: {
+    "[@pageAnimations]": ""
+  }
 })
 export class ViewComponent implements OnInit {
 
